@@ -22,15 +22,15 @@ TIM_TypeDef TIM12_REG;
 TIM_TypeDef TIM13_REG;
 TIM_TypeDef TIM14_REG;
 
-TIM_TypeDef * const TIM2;
-TIM_TypeDef * const TIM3;
-TIM_TypeDef * const TIM4;
-TIM_TypeDef * const TIM5;
-TIM_TypeDef * const TIM6;
-TIM_TypeDef * const TIM7;
-TIM_TypeDef * const TIM12;
-TIM_TypeDef * const TIM13;
-TIM_TypeDef * const TIM14;
+TIM_TypeDef * const TIM2 =  &TIM2_REG;
+TIM_TypeDef * const TIM3 =  &TIM3_REG;
+TIM_TypeDef * const TIM4 =  &TIM4_REG;
+TIM_TypeDef * const TIM5 =  &TIM5_REG;
+TIM_TypeDef * const TIM6 =  &TIM6_REG;
+TIM_TypeDef * const TIM7 =  &TIM7_REG;
+TIM_TypeDef * const TIM12 = &TIM12_REG;
+TIM_TypeDef * const TIM13 = &TIM13_REG;
+TIM_TypeDef * const TIM14 = &TIM14_REG;
 
 LPTIM_TypeDef LPTIM1_REG;
 RTC_TypeDef RTC_REG;
