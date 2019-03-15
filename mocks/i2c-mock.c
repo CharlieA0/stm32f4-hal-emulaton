@@ -17,7 +17,10 @@ uint16_t receive_address;
 // Mocks the functionality of i2c transmit by writing each value to tx_queue
 // Always sets transmit_address to DevAddress before writing
 HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout) {
-  
+ 
+  UNUSED(hi2c);
+  UNUSED(Timeout);
+
   transmit_address = DevAddress;
     
   TEST_ASSERT_NOT_NULL_MESSAGE(tx_queue_start, "I2C Mock Failed: tx_queue's start wasn't initialized");
@@ -37,7 +40,10 @@ HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef *hi2c, uint16_t DevA
 // Mocks the functionality of i2c read by reading each value from rx_queue
 // Always sets receive_address to DevAddress before reading
 HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *rsp, uint16_t Size, uint32_t Timeout) {
-  
+ 
+  UNUSED(hi2c);
+  UNUSED(Timeout);
+
   receive_address = DevAddress;
 
   TEST_ASSERT_NOT_NULL_MESSAGE(rx_queue_start, "I2C Mock Failed: rx_queue's start wasn't initialized");

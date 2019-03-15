@@ -1,7 +1,7 @@
 #ifndef MOCK_I2C_H
 #define MOCK_I2C_H
 
-#include "common_mock.h"
+#include "common-mock.h"
 
 // Pointers to start and end of the transmission / reception queues
 // Set these to a valid queues for i2c to read from / write to
